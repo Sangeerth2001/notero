@@ -108,92 +108,16 @@ export default function Dashboard() {
         </div>
       </header>
 
-      {/* Main Content */}
+      {/* Main Content - Welcome Section Only */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Welcome Section */}
-        <div className="bg-white border border-gray-200 rounded-lg shadow-sm mb-8">
+        <div className="bg-white border border-gray-200 rounded-lg shadow-sm">
           <div className="px-8 py-12 text-center">
             <h1 className="text-4xl font-bold text-black mb-4">
               Welcome back, {user?.name?.split(' ')[0]}!
             </h1>
-            <p className="text-gray-600 text-lg mb-8">
+            <p className="text-gray-600 text-lg">
               Ready to capture your thoughts and ideas?
             </p>
-            
-            {/* Quick Actions */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <button className="px-6 py-3 bg-black text-white font-medium rounded-md hover:bg-gray-800 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2">
-                Create New Note
-              </button>
-              <button className="px-6 py-3 bg-white text-black font-medium rounded-md border border-gray-300 hover:bg-gray-50 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2">
-                Browse Notes
-              </button>
-            </div>
-
-            {/* User Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-              <div className="text-center p-4 border border-gray-200 rounded-lg bg-gray-50">
-                <div className="text-2xl font-bold text-black mb-1">0</div>
-                <div className="text-sm text-gray-600">Total Notes</div>
-              </div>
-              <div className="text-center p-4 border border-gray-200 rounded-lg bg-gray-50">
-                <div className="text-2xl font-bold text-black mb-1">0</div>
-                <div className="text-sm text-gray-600">Categories</div>
-              </div>
-              <div className="text-center p-4 border border-gray-200 rounded-lg bg-gray-50">
-                <div className="text-2xl font-bold text-black mb-1">Today</div>
-                <div className="text-sm text-gray-600">Last Activity</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Quick Access Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Recent Notes */}
-          <div className="bg-white border border-gray-200 rounded-lg shadow-sm">
-            <div className="px-6 py-4 border-b border-gray-200">
-              <h2 className="text-lg font-semibold text-black">Recent Notes</h2>
-            </div>
-            <div className="p-6">
-              <div className="text-center py-8">
-                <div className="w-16 h-16 mx-auto mb-4 bg-gray-100 rounded-full flex items-center justify-center">
-                  <svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                  </svg>
-                </div>
-                <p className="text-gray-500 mb-4">No notes yet</p>
-                <button className="text-black hover:text-gray-700 font-medium transition-colors">
-                  Create your first note →
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* Account Information */}
-          <div className="bg-white border border-gray-200 rounded-lg shadow-sm">
-            <div className="px-6 py-4 border-b border-gray-200">
-              <h2 className="text-lg font-semibold text-black">Account Information</h2>
-            </div>
-            <div className="p-6 space-y-4">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
-                <p className="text-black">{user?.name}</p>
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-                <p className="text-black">{user?.email}</p>
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Account Type</label>
-                <p className="text-black">{user?.role || 'Standard User'}</p>
-              </div>
-              <div className="pt-4">
-                <button className="text-sm text-gray-600 hover:text-black transition-colors">
-                  Edit Profile →
-                </button>
-              </div>
-            </div>
           </div>
         </div>
       </main>
